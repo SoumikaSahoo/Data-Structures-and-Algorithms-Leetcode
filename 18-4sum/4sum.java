@@ -28,7 +28,7 @@ if(i>0 && nums[i]==nums[i-1]){
                     }  
                    }else if(sum<target){
                     left++;
-                   }else if(sum>target){
+                   }else {
                     right--;
                    }
 
