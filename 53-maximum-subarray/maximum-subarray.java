@@ -1,12 +1,14 @@
 class Solution {
     public int maxSubArray(int[] nums) {
-        int n=nums.length;
-        int currentsum=nums[0];
-        int maxsum=nums[0];
-        for(int i=1;i<n;i++){
-currentsum=Math.max(nums[i],currentsum+nums[i]);
-maxsum=Math.max(maxsum,currentsum);
-        }
-        return maxsum;
+     int i=0;
+     int bestans=nums[0];
+     int ans=nums[0];
+     for(i=1;i<nums.length;i++){
+        int b1=bestans+nums[i];
+        int b2=nums[i];
+        bestans=Math.max(b1,b2);
+        ans=Math.max(bestans,ans);
+     }
+     return ans;
     }
 }
