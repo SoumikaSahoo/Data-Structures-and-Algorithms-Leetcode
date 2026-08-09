@@ -12,38 +12,37 @@ class Solution {
         int low = 0;
         int high = n - 1;
 
-        while (low <= high) {
-            int guess = (low + high) / 2;
-
-            if (a[guess] < x) {
-                low = guess + 1;
-            } else {
-                if (a[guess] == x) res = guess;
-                high = guess - 1;
-            }
+      while(low<=high){
+        int guess=(high+low)/2;
+        if(a[guess]<x){
+            low=guess+1;
+        }else if(a[guess]>x){
+            high=guess-1;
+        }else{
+            res=guess;
+            high=guess-1;
         }
-
-        return res;
+      }
+      return res;
     }
-
-    private int upperbound(int[] a, int x) {
+     private int upperbound(int[] a, int x) {
         int n = a.length;
         int res = -1;
         int low = 0;
         int high = n - 1;
 
-        while (low <= high) {
-            int guess = (low + high) / 2;
-
-            if (a[guess] > x) {
-                high = guess - 1;
-            } else {
-                if (a[guess] == x) res = guess;
-                low = guess + 1;
-            }
+      while(low<=high){
+        int guess=(high+low)/2;
+        if(a[guess]>x){
+            high=guess-1;
+        }else if(a[guess]<x){
+            low=guess+1;
+        }else{
+            res=guess;
+            low=guess+1;
         }
-
-        return res;
+      }
+      return res;
     }
 }
     
