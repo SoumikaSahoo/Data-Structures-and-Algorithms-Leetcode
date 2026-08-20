@@ -1,6 +1,6 @@
 class Solution {
     public int findLucky(int[] num) {
-        int n=num.length;
+       
         int ans=-1;
         HashMap<Integer,Integer>map=new HashMap<>();
         for(int x:num){
