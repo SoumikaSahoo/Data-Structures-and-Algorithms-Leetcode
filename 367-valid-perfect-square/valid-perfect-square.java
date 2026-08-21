@@ -9,7 +9,7 @@ class Solution {
         while(left<=right){
             int mid=(left+right)/2;
             long square =(long)mid*mid;
-            if(mid*mid==num){
+            if(square==num){
                 return true;
             }else if(square<num){
                 left=mid+1;
