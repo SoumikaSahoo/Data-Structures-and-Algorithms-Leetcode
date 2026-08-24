@@ -11,7 +11,7 @@ class Solution {
         sum=sum+nums[i];
      }
 
-     if(sum-nums[0]==0) return 0;
+   
 
      for(i=0;i<n;i++){
     int right=sum-nums[i]-left;
