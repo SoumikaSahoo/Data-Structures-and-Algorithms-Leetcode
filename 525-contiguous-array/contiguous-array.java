@@ -13,7 +13,9 @@ class Solution {
                 ans=Math.max(ans,i+1);
             }
 if(map.containsKey(diff)){
-    ans=Math.max(ans,i-map.get(diff));
+    int index=map.get(diff);
+    int len=i-index;
+    ans=Math.max(ans,len);
 }else{
     map.put(diff,i);
 }
