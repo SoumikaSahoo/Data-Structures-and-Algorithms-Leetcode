@@ -16,7 +16,6 @@ class Solution {
        ans=root;
     }
     return ans;
-
- 
+  
     }
 }
