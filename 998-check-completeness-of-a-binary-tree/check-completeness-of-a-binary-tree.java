@@ -4,7 +4,7 @@ boolean nullfound=false;
     public boolean isCompleteTree(TreeNode root) {
      if(root==null) return true;
      Queue<TreeNode>q=new LinkedList<>();
-     q.offer(root);
+     q.add(root);
      while(!q.isEmpty()){
         TreeNode t=q.poll();
        
@@ -15,8 +15,8 @@ boolean nullfound=false;
                 return false;
             }
         
-        q.offer(t.left);
-        q.offer(t.right);
+        q.add(t.left);
+        q.add(t.right);
 
      }
      }
