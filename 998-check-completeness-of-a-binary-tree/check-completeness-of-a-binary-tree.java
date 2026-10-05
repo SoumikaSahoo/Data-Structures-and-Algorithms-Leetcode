@@ -6,8 +6,8 @@ boolean nullfound=false;
      Queue<TreeNode>q=new LinkedList<>();
      q.offer(root);
      while(!q.isEmpty()){
-        TreeNode t=q.peek();
-        q.poll();
+        TreeNode t=q.poll();
+       
         if(t==null){
             nullfound=true;
         }else{
